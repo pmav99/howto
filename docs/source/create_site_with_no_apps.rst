@@ -11,12 +11,25 @@ In order to follow this how-to, you will need the following python packages:
 Overview
 --------
 
-Actually it is rather simple to create a django site with no applications. It is
-a three-step procedure.
+A Django project is really nothing more than a ``settings.py`` module, and
+a Django App is really nothing more than a ``models.py`` module. Everything else
+is truly optional.
+
+In this howto we are going to show you how to create a simple Django site with no
+Apps. As you will see it is rather simple:
 
 #. Create a new Django Website.
-#. add a ``views.py`` to the website directory
+
+#. Add a ``models.py`` to the website directory.
+
+#. add a ``views.py`` to the website directory.
+
 #. add the necessary rules for the url routing (``urls.py``).
+
+In the following example, in order to keep things simple, we are not going to
+bother with models at all, but in your projects you are going to use them.  If
+you don't then you probably shouldn't be using Django in the first place.
+Serving static pages can more easily be done with just html ;)
 
 Implementation
 --------------
@@ -41,7 +54,8 @@ which means that we are going to end with a directory structure like this one::
 Write the views
 ~~~~~~~~~~~~~~~
 
-Now we need to create a file named ``views.py`` into our website directory and write the views functions/classes:
+Now we need to create a file named ``views.py`` into our website directory and
+write the views functions/classes:
 
 .. literalinclude:: /../../source/create_site_with_no_apps/mysite/mysite/views.py
    :language: python
@@ -88,12 +102,12 @@ Extending
 Of course, in real life, our sites are not going to be so simple :).
 
 We are going to have a lot of views and for each view we are going to need
-a template file.  But extendig from what we got so far, should be really easy.
+a template file.  But extending from what we got so far, should be really easy.
 
 For example we probably will want a ``templates`` directory within the website
 directory to hold our templates.  Also, if we need a database, then we will add
-``models.py`` too. If we have forms then we will add a ``forms.py`` etc.
-So, the directory structure is going to look similar to this one::
+``models.py`` too. If we have forms then we will add a ``forms.py`` etc.  So,
+the directory structure is probably going to look more like the following one::
 
     root
     └── mysite
