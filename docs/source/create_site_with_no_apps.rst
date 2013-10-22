@@ -14,17 +14,17 @@ Overview
 Actually it is rather simple to create a django site with no applications. It is
 a three-step procedure.
 
-#. Create a Django site.
+#. Create a new Django Website.
 #. add a ``views.py`` to the website directory
 #. add the necessary rules for the url routing (``urls.py``).
 
 Implementation
 --------------
 
-Create the Django App
-~~~~~~~~~~~~~~~~~~~~~
+Create the Django Website
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The first step, of course, is to create a new django application::
+The first step, of course, is to create a new Django Website::
 
     django-admin.py startproject mysite
 
@@ -71,9 +71,13 @@ At this point, the directory structure looks like this::
         ├── views.py
         └── wsgi.py
 
-in order to test our new site all we have to do is to run::
+In order to test our new site all we have to do is to run::
 
     python manage.py runserver
+
+and visit the following address::
+
+    http://127.0.0.1:8000/index/
 
 .. Note:: We don't need to run ``python manage.py syncdb`` since we don't use
           a database.

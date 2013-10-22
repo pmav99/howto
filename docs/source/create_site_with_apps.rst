@@ -16,23 +16,24 @@ Overview
 The procedure we have to follow is very similar to the one we followed for the
 Django site with no applications. The main difference is that we need first to
 create the new Django application and then to notify Django that our new
-application is there. Let's see how:
+application is there. Let's see the involved steps in detail:
 
+#. Create a new Django Website.
 #. create the new application by using the ``manage.py``.
-
 #. open the ``settings.py`` of the website directory and add the name of the new
    application to the ``INSTALLED_APPS`` list.
-
 #. open the ``views.py`` of the new application and write the views
    (functions/classes).
-
 #. add the necessary rules for the url routing at the ``urls.py`` of the website
    directory.
 
 Implementation
 --------------
 
-The first step, of course, is to create a new Django project::
+Create the Django Website
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The first step, of course, is to create a new Django Website::
 
     django-admin.py startproject mysite
 
@@ -120,6 +121,10 @@ At this point, the directory structure looks like this::
 In order to test our new site all we have to do is to run::
 
     python manage.py runserver
+
+and visit the following address::
+
+    http://127.0.0.1:8000/index/
 
 .. Note:: We don't need to run ``python manage.py syncdb`` since we don't use
           a database.
