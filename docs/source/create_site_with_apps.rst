@@ -1,8 +1,12 @@
-How to create a Django site with applications
-=============================================
+How to create a Django site with Apps
+=====================================
 
-If you have already created a django site without applications, the you will
-find it very easy to expand your knowledge to sites that use applications.
+Prerequisites
+-------------
+
+In order to follow this how-to, you will need the following python packages:
+
+.. literalinclude:: /../../source/create_site_with_apps/requirements.txt
 
 .. Note:: The finished code for this example can be found at `the github repo`_
 
@@ -94,8 +98,8 @@ website directory:
    :linenos:
    :emphasize-lines: 18
 
-Test
-~~~~
+Summing it up
+~~~~~~~~~~~~~
 
 At this point, the directory structure looks like this::
 

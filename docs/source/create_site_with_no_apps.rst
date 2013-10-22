@@ -1,10 +1,28 @@
-How to create a Django site with no applications
-================================================
+How to create a Django site with no Apps
+========================================
+
+Prerequisites
+-------------
+
+In order to follow this how-to, you will need the following python packages:
+
+.. literalinclude:: /../../source/create_site_with_no_apps/requirements.txt
 
 Overview
 --------
 
-Actually it is rather simple to create a django site with no applications.
+Actually it is rather simple to create a django site with no applications. It is
+a three-step procedure.
+
+#. Create a Django site.
+#. add a ``views.py`` to the website directory
+#. add the necessary rules for the url routing (``urls.py``).
+
+Implementation
+--------------
+
+Create the Django App
+~~~~~~~~~~~~~~~~~~~~~
 
 The first step, of course, is to create a new django application::
 
@@ -20,26 +38,27 @@ which means that we are going to end with a directory structure like this one::
         ├── urls.py
         └── wsgi.py
 
-Now, all we have to do is to:
+Write the views
+~~~~~~~~~~~~~~~
 
-#. add a ``views.py`` to the website directory
-#. add the necessary rules for the url routing (``urls.py``).
-
-Implementation
---------------
-
-For example, we will add a simple view at the ``views.py``:
+Now we need to create a file named ``views.py`` into our website directory and write the views functions/classes:
 
 .. literalinclude:: /../../source/create_site_with_no_apps/mysite/mysite/views.py
    :language: python
    :linenos:
 
-and add the corresponding rule for routing at the ``urls.py``:
+Url routing
+~~~~~~~~~~~
+
+Finally we have to add the corresponding rule for routing at the ``urls.py``:
 
 .. literalinclude:: /../../source/create_site_with_no_apps/mysite/mysite/urls.py
    :language: python
    :linenos:
    :emphasize-lines: 18
+
+Summing it up
+~~~~~~~~~~~~~
 
 At this point, the directory structure looks like this::
 
@@ -83,3 +102,4 @@ So, the directory structure is going to look similar to this one::
        ├── views.py
        └── wsgi.py
 
+.. _the github repo: https://github.com/pmav99/howto/tree/master/source/create_site_with_no_apps
