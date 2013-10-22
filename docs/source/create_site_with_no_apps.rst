@@ -1,3 +1,5 @@
+.. _django_site_with_no_apps:
+
 How to create a Django site with no Apps
 ========================================
 
@@ -7,6 +9,8 @@ Prerequisites
 In order to follow this how-to, you will need the following python packages:
 
 .. literalinclude:: /../../source/create_site_with_no_apps/requirements.txt
+
+.. Note:: The finished code for this example can be found at `the github repo`_
 
 Overview
 --------

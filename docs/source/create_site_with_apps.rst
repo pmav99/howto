@@ -1,3 +1,5 @@
+.. _django_site_with_apps:
+
 How to create a Django site with Apps
 =====================================
 
@@ -13,19 +15,28 @@ In order to follow this how-to, you will need the following python packages:
 Overview
 --------
 
-The procedure we have to follow is very similar to the one we followed for the
-Django site with no applications. The main difference is that we need first to
-create the new Django application and then to notify Django that our new
-application is there. Let's see the involved steps in detail:
+The procedure we have to follow is very similar to the one we followed on
+":ref:`django_site_with_no_apps`". The main difference is that we need first to
+create the new Django App and then to notify Django that our new App is there.
+Let's see the involved steps in detail:
 
 #. Create a new Django Website.
-#. create the new application by using the ``manage.py``.
-#. open the ``settings.py`` of the website directory and add the name of the new
+
+#. Create the new Django App using the ``manage.py``.
+
+#. Edit ``settings.py`` of the website directory and add the name of the new
    application to the ``INSTALLED_APPS`` list.
-#. open the ``views.py`` of the new application and write the views
+
+#. Edit ``views.py`` of the new Django App and write the views
    (functions/classes).
-#. add the necessary rules for the url routing at the ``urls.py`` of the website
+
+#. Add the necessary rules for the url routing at the ``urls.py`` of the website
    directory.
+
+In this example, in order to keep things simple, we are not going to bother with
+models at all, but in your projects you are going to use them.  If you don't
+then you probably shouldn't be using Django in the first place.  Serving static
+pages can more easily be done with just html ;)
 
 Implementation
 --------------
@@ -82,7 +93,7 @@ Edit the ``settings.py`` file and add a line with the name of the App to the
 Write the views
 ~~~~~~~~~~~~~~~
 
-Now we can proceed with creating our views at the ``views.py`` of our new app:
+Now we can proceed with creating our views at the ``views.py`` of our new App:
 
 .. literalinclude:: /../../source/create_site_with_apps/mysite/sample_app/views.py
    :language: python
