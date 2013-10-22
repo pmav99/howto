@@ -4,6 +4,8 @@ How to create a Django site with applications
 If you have already created a django site without applications, the you will
 find it very easy to expand your knowledge to sites that use applications.
 
+.. Note:: The finished code for this example can be found at `the github repo`_
+
 Overview
 --------
 
@@ -51,7 +53,7 @@ following command::
 This command creates a new folder beside our website directory that has the
 following structure::
 
-    sample_app1
+    sample_app
     ├── __init__.py
     ├── models.py
     ├── tests.py
@@ -79,14 +81,13 @@ Now we can proceed with creating our views at the ``views.py`` of our new app:
 
 .. literalinclude:: /../../source/create_site_with_apps/mysite/sample_app/views.py
    :language: python
-   :lines: 116-128
-   :emphasize-lines: 127
    :linenos:
 
 Url routing
 ~~~~~~~~~~~
 
-Finally we add the corresponding rule for routing at the ``urls.py``:
+Finally we add the corresponding rule for routing at the ``urls.py`` of the
+website directory:
 
 .. literalinclude:: /../../source/create_site_with_no_apps/mysite/mysite/urls.py
    :language: python
@@ -160,3 +161,4 @@ So, the directory structure is going to look similar to this one::
         ├── tests.py
         └── views.py
 
+.. _the github repo: https://github.com/pmav99/howto/tree/master/source/create_site_with_apps
