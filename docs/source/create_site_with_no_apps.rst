@@ -67,10 +67,10 @@ Of course, in real life, our sites are not going to be so simple :).
 We are going to have a lot of views and for each view we are going to need
 a template file.  But extendig from what we got so far, should be really easy.
 
-For example we will probably want a ``templates`` directory within the website
+For example we probably will want a ``templates`` directory within the website
 directory to hold our templates.  Also, if we need a database, then we will add
 ``models.py`` too. If we have forms then we will add a ``forms.py`` etc.
-So, the directory structure is going to look something like this::
+So, the directory structure is going to look similar to this one::
 
     root
     └── mysite
