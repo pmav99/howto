@@ -13,7 +13,7 @@ Contents:
 
    create_site_with_no_apps
    create_site_with_apps
-   use_django_builtin_authentication_system
+   use_builtin_auth_system
 
 Prerequisites and other resources
 =================================
