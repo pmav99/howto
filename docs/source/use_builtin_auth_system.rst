@@ -230,8 +230,6 @@ our App and the names of the other Apps we must put our templates under
 ``mysite.urls``
 ---------------
 
-Στο ``mysite.urls`` προσθέτουμε τα url() που θέλουμε. Πχ έστω τα:
-
 .. code-block:: python
 
     urlpatterns = patterns('account',
@@ -246,7 +244,5 @@ our App and the names of the other Apps we must put our templates under
 
 ``mysite.views``
 ----------------
-
-Προσθέτουμε το αρχείο
 
 .. _the github repo: https://github.com/pmav99/howto/tree/master/source/use_builtin_auth_system
